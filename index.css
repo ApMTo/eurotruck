@@ -1,0 +1,201 @@
+/* 
+1 Mercedes
+1 daf
+1 scania
+1 Renault
+*/
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Rubik+Glitch+Pop&family=Rubik+Scribble&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #161a1d;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  animation: animOpening 2.5s alternate;
+}
+
+@keyframes animOpening {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.header h3 {
+  margin-left: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.header span {
+  color: red;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 25px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-right: 55px;
+}
+
+.heading {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.heading img {
+  width: 650px;
+  object-fit: contain;
+}
+
+.heading h1 {
+  text-align: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 125px auto;
+  width: 450px;
+}
+
+.whyChooseUs {
+  margin-top: 200px;
+  transition: all 0.5s;
+}
+
+.whyChooseUs h2 {
+  text-align: center;
+}
+
+.whyChoouseUsImageAndText {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.whyChoouseUsImageAndText img {
+  width: 650px;
+}
+
+.whyChoouseUsImageAndText p {
+  width: 300px;
+}
+
+.whyChoouseUsImageAndText span {
+  color: rgb(229, 190, 33);
+  font-size: 19px;
+}
+
+.active {
+  opacity: 1;
+}
+
+.reliability {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.quality {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.quality img {
+  margin-left: -150px;
+  width: 750px;
+}
+
+
+.maintenance {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.maintenance img {
+    width: 650px;
+}
+
+.conditions {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .conditions img {
+    width: 650px;
+    margin-left: -100px;
+  }
+
+@media only screen and (max-width: 643px) {
+    .heading img {
+      width: 300px;
+    }
+  
+    .reliability img {
+      width: 350px;
+    }
+    .quality img {
+      width: 375px;
+    }
+
+    .maintenance img {
+        width: 350px;
+    }
+    
+    .conditions img {
+        width: 350px;
+    }
+  }
+  
+  @media only screen and (max-width: 915px) {
+      .quality img {
+          margin-left: 0;
+      }
+
+      .conditions img {
+        margin-left: 0;
+      }
+  }
+
+ 
