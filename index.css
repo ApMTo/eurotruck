@@ -1,0 +1,405 @@
+/* 
+1 Mercedes
+1 daf
+1 scania
+1 Renault
+*/
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Rubik+Glitch+Pop&family=Rubik+Scribble&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+body {
+  background-color: #161a1d;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  animation: animOpening 2.5s alternate;
+}
+
+@keyframes animOpening {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.header h3 {
+  margin-left: 25px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.header span {
+  color: red;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-right: 25px;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-right: 55px;
+}
+
+.heading {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.heading img {
+  width: 650px;
+  object-fit: contain;
+}
+
+.heading h1 {
+  text-align: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 125px auto;
+  width: 450px;
+}
+
+.whyChooseUs {
+  margin-top: 200px;
+  transition: all 0.5s;
+}
+
+.whyChooseUs h2 {
+  text-align: center;
+}
+
+.whyChoouseUsImageAndText {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row-reverse;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.whyChoouseUsImageAndText img {
+  width: 650px;
+}
+
+.whyChoouseUsImageAndText p {
+  width: 300px;
+}
+
+.whyChoouseUsImageAndText span {
+  color: rgb(229, 190, 33);
+  font-size: 19px;
+}
+
+.active {
+  opacity: 1;
+}
+
+.reliability {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+.quality {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.quality img {
+  margin-left: -150px;
+  width: 750px;
+}
+
+
+.maintenance {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.maintenance img {
+    width: 650px;
+}
+
+.conditions {
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .conditions img {
+    width: 650px;
+    margin-left: -100px;
+  }
+
+@media only screen and (max-width: 643px) {
+    .heading img {
+      width: 300px;
+    }
+  
+    .reliability img {
+      width: 350px;
+    }
+    .quality img {
+      width: 375px;
+    }
+
+    .maintenance img {
+        width: 350px;
+    }
+    
+    .conditions img {
+        width: 350px;
+    }
+  }
+  
+  @media only screen and (max-width: 915px) {
+      .quality img {
+          margin-left: 0;
+      }
+
+      .conditions img {
+        margin-left: 0;
+      }
+  }
+
+ 
+  /*************************************************** Product */
+
+
+
+
+.hide {
+  left: -255px;
+}
+
+@media only screen and (max-width: 582px) {
+  .show {
+    width: 108%;
+  }
+}
+
+.photoalbum h2 {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.photoalbumBody {
+  margin-top: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.photoalbumBody img {
+  width: 500px;
+  height: 350px;
+  object-fit: contain;
+}
+
+.photoalbumBody span {
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.closeMenu {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 10px;
+  top: 15px;
+}
+
+.trucks {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.truck {
+  width: 360px;
+  height: 470px;
+  border: 1px solid white;
+
+}
+
+.truckImage img {
+  width: 360px;
+  height: 250px;
+}
+
+.truckInfo h3 {
+  text-align: center;
+}
+
+.truckCharacteristic {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  gap: 20px;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #e8d9d9;
+}
+
+.truckPower {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 10px;
+  font-size: 14px;
+  color: #e8d9d9;
+}
+
+.Truckprice {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.menu {
+  margin-top: 20px;
+  margin-left: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.menuBody {
+  width: 375px;
+  height: 100vh;
+  position: absolute;
+  left: -555px;
+  top: 0;
+  transition: all 0.5s;
+}
+
+.menuFixed {
+  position: fixed;
+}
+
+.show {
+  position: fixed;
+  top: 0;
+  left: 0px;
+  background-color: rgb(32, 29, 29);
+  box-shadow: 0px 0px 10px white;
+  overflow-y: auto;
+  cursor: auto;
+}
+
+.show h2 {
+  margin-left: 15px;
+  margin-bottom: -5px;
+}
+
+.brand p {
+  padding-left: 30px;
+  cursor: pointer;
+  color: #e8d9d9;
+  animation: open 1s alternate;
+}
+
+.openBrand {
+  animation: open 1s alternate;
+
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+  }
+
+   to {
+    opacity: 1;
+   }
+}
+
+/* 483 */
+
+@media only screen and (max-width: 483px) {
+  .menuBody {
+    width: 320px;
+  }
+}
+
+.price {
+  margin-top: 80px;
+  transition: all 0.5s;
+}
+
+.price input {
+  margin-top: 15px;
+  margin-left: 30px;
+  padding: 6px;
+  background: rgb(8,8,10);
+  background: linear-gradient(90deg, rgba(8,8,10,1) 38%, rgba(65,88,96,1) 76%);
+  border: none;
+  outline-color: rgb(60, 58, 62);
+  color: white;
+}
+
+.price input::placeholder {
+  color: white;
+}
+
+.price button {
+  display: block;
+  margin: 10px auto;
+  padding: 7px;
+  background: rgb(8,8,10);
+  background: linear-gradient(90deg, rgba(8,8,10,1) 38%, rgba(65,88,96,1) 76%);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  color: white;
+  transition: 0.5s;
+}
+
+
+.price button:hover {
+  background: none;
+  border: 1px solid white;
+}
