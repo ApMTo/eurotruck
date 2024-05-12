@@ -1,9 +1,3 @@
-/* 
-1 Mercedes
-1 daf
-1 scania
-1 Renault
-*/
 @import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Rubik+Glitch+Pop&family=Rubik+Scribble&display=swap");
 
 html {
@@ -94,6 +88,7 @@ nav a {
   text-align: center;
 }
 
+
 .whyChoouseUsImageAndText {
   margin-top: 80px;
   display: flex;
@@ -128,6 +123,10 @@ nav a {
     flex-wrap: wrap;
 }
 
+.reliability p {
+  margin-left: 20px;
+}
+
 .quality {
   margin-top: 200px;
   display: flex;
@@ -135,6 +134,7 @@ nav a {
   align-items: center;
   flex-wrap: wrap;
 }
+
 
 .quality img {
   margin-left: -150px;
@@ -262,7 +262,18 @@ nav a {
   width: 360px;
   height: 470px;
   border: 1px solid white;
+  transition: 1s;
+  animation: animOp 1s alternate;
+}
 
+@keyframes animOp {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .truckImage img {
@@ -301,6 +312,7 @@ nav a {
 }
 
 .menu {
+  display: inline;
   margin-top: 20px;
   margin-left: 15px;
   position: relative;
@@ -314,6 +326,8 @@ nav a {
   left: -555px;
   top: 0;
   transition: all 0.5s;
+  background: rgb(8,8,10);
+  background: radial-gradient(circle, rgba(8,8,10,1) 61%, rgba(8,8,10,1) 66%, rgba(28,57,68,1) 98%);
 }
 
 .menuFixed {
@@ -324,10 +338,12 @@ nav a {
   position: fixed;
   top: 0;
   left: 0px;
-  background-color: rgb(32, 29, 29);
+  background: rgb(8,8,10);
+  background: radial-gradient(circle, rgba(8,8,10,1) 61%, rgba(8,8,10,1) 66%, rgba(28,57,68,1) 98%);
   box-shadow: 0px 0px 10px white;
   overflow-y: auto;
   cursor: auto;
+  z-index: 999;
 }
 
 .show h2 {
@@ -402,4 +418,72 @@ nav a {
 .price button:hover {
   background: none;
   border: 1px solid white;
+}
+
+.reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: rgba(32, 31, 31, 0.291);
+  border-radius: 20px;
+  box-shadow: rgba(169, 164, 164, 0.25) 0px 54px 55px, rgba(253, 253, 253, 0.12) 0px -12px 30px, rgba(216, 213, 213, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(254, 254, 254, 0.09) 0px -3px 5px;
+  width: 500px;
+  min-height: 400px;
+  margin: 80px auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .reviews {
+    width: 350px;
+  }
+}
+
+.reviewsTitle {
+  text-align: center;
+  margin-top: 150px;
+}
+
+
+.review img {
+  display: block;
+  margin: 20px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.review h2 {
+  color: orange;
+  text-align: center;
+}
+
+.review {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.rate {
+  text-align: center !important;
+  margin-top: 20px
+}
+
+.prev, .next {
+  cursor: pointer;
+  margin: 10px;
+  margin-top: 60px;
+  font-size: 40px;
+}
+
+footer p {
+  text-align: center;
+}
+
+
+footer span {
+  color: red;
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
 }
