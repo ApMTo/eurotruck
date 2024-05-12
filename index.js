@@ -1,273 +1,112 @@
-const cars = [
-  {
-    name: "Mercedes-Benz Actros 1845LS",
-    brand: "Mercedes-Benz",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "449 hp (330 kW)",
-    image:
-      "https://centr-teh.ru/storage/images/goods/OnYZ0V1An9yEff8JSHEQavPrV76CaKhTbf6kX7RS.jpg",
-    price: 46900,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "DAF XF 460 FT",
-    brand: "DAF Trucks",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "462 hp (340 kW)",
-    image:
-      "https://www.truck1.uz/img/Tyagach_Daf_Xf_460_ft-ful-15826/15826_2243543254016.jpg",
-    price: 125514,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "Renault T480 RETARDER",
-    brand: "Renault",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "480 hp (353 kW)",
-    image:
-      "https://autoline-ge.com/img/s/tyagach-Renault-T480-COMFORT-RETARDER-SUPER-CONDITION---1685962130544421924_common--23060513424868446600.jpg",
-    price: 54500,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "Scania S660 HHR PREMIUM",
-    brand: "Scania",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "660 hp. (485 kW)",
-    image:
-      "https://www.tomholdingbv.com/wp-content/uploads/2023/11/S660-new-RV-scaled.jpg",
-    price: 174829,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "DAF XF 530 FT SPACE CAB",
-    brand: "DAF Trucks",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "530 hp (390 kW)",
-    image:
-      "https://tp-daf.ru/upload/iblock/8df/8df97eaf651eacde51882628160831eb.png",
-    price: 37500,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "Volvo FH13 500 4x2 XL Euro 6 VEB+, RBS, MCT",
-    brand: "Volvo",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "500 hp. (368 kW)",
-    image:
-      "https://autoline-tm.com/img/s/tyagach-Volvo-FH13-500-6x2-XL-Euro-6-Retarder-Double-Boogie---1705439207116009158_common--24011623063689937200.jpg",
-    price: 89400,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "Mercedes-Benz Actros 1848 LS",
-    brand: "Mercedes-Benz",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "454 hp (341 kW)",
-    image:
-      "https://d2e5b8shawuel2.cloudfront.net/vehicle/263218/hrv/original.jpg",
-    price: 52000,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "Mercedes-Benz Actros 1851",
-    brand: "Mercedes-Benz",
-    type: "Քարշակ",
-    euro: "Euro 5",
-    fuel: "Դիզել",
-    power: "510 hp (375 kW)",
-    image:
-      "https://d2e5b8shawuel2.cloudfront.net/vehicle/282579/hlv/original.jpg",
-    price: 25000,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "Scania R450 NA",
-    brand: "Scania",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "450 hp (331 kW)",
-    image:
-      "https://www.truck1-ru.lv/img/Tyagach_SCANIA_R450_NA_KOBLENZ_EDiTiON_HYDRAULIK_HIGHLINE-xxl-1768/1768_119114078852.jpg",
-    price: 96000,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "MAN TGX 18.470",
-    brand: "MAN",
-    type: "Քարշակ",
-    euro: "Euro 5",
-    fuel: "Դիզել",
-    power: "470 hp (346 kW)",
-    image:
-      "https://autoplius-img.dgn.lt/ann_25_305548577/man-tgx-18-470-4x2-bl-sa-5764-2-spalnyh-mesta.jpg",
-    price: 71281,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "DAF XF106 460",
-    brand: "DAF Trucks",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "489 hp (351 kW)",
-    image:
-      "https://autoline24.am/img/s/tyagach-DAF-XF-106-460---1678543396479150167_big--23031115584116134200.jpg",
-    price: 89900,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "Volvo FH5-500",
-    brand: "Volvo",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "500 hp (368 kW)",
-    image:
-      "https://www.truck1.uz/img/Tyagach_Volvo_FH_500_NEW_MODEL_FH5_ALCOA_PARK_COOLER_LOW_KM-ful-7272/7272_5018785680449.jpg",
-    price: 53500,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "Renault T520",
-    brand: "Renault",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "520 hp (382 kW)",
-    image:
-      "https://st.mascus.com/imagetilewm/product/0791fb8d/renault-t520-evolution-6x2-kor,1109d9d2.jpg",
-    price: 55340,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "IVECO Stralis AS440S51T/P",
-    brand: "Iveco",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "510 hp (375 kW)",
-    image:
-      "https://autoline24.am/img/s/tyagach-IVECO-Stralis-AS440S51TP-Euro6-Intarder---1709141170694827247_common--24022819261066353100.jpg",
-    price: 58000,
-    Transmission: "Ավտոմատ",
-  },
-  {
-    name: "IVECO S-Way 490",
-    brand: "Iveco",
-    type: "Քարշակ",
-    euro: "Euro 6",
-    fuel: "Դիզել",
-    power: "490 hp (360 kW)",
-    image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM8PRbkxOItNPwT_CAsE4JGWFjyg4tDgpxqVSdbKG9hQ&s",
-    price: 89900,
-    Transmission: "Ավտոմատ",
-  },
+const clientsReviews = [
+    {
+      id: 1,
+      name: "Ալեքսանդր Պետրով",
+      image:
+        "https://citap.unc.edu/wp-content/uploads/2022/07/Daniel-1-500x500.jpg",
+      reviev:
+        "Մենք Եվրոպայից բեռնատար ենք գնել ձեր ընկերությունից: Մենք շատ գոհ ենք որակից և սպասարկումից։ Գնումների գործընթացը հարթ և արագ էր, իսկ անձնակազմը բանիմաց և քաղաքավարի: Ես առաջարկում եմ ձեր ընկերությունը որպես վստահելի գործընկեր բեռնատար մեքենաների գնման համար:",
+      rate: 10,
+    },
+    {
+      id: 2,
+      name: "Ելենա Կոզլովա",
+      image:
+        "https://otvet.co/media/CACHE/images/specialists/FI0A7878/998f457c24b0a72b93968c7a4cac1b81.jpg",
+      reviev:
+        "Ձեր ընկերության հետ համագործակցությունը ստացվեց հաճելի և արդյունավետ։ Մենք Եվրոպայից ստացանք բեռնատար գերազանց վիճակում։ Պատվերների արագ և պրոֆեսիոնալ մշակում։ Շատ շնորհակալ ենք գերազանց սպասարկման համար։",
+      rate: 9,
+    },
+    {
+      id: 3,
+      name: "Դմիտրի Միխայլով",
+      image:
+        "https://colibrident.ru/upload/resize_cache/webp/iblock/383/Zyubin_1.webp",
+      reviev:
+        "Ձեր ընկերությունը տրամադրել է հիանալի առաջարկ Եվրոպայից բեռնատարներ գնելու համար: Գնման գործընթացը հեշտ և թափանցիկ էր: Բեռնատարը ժամանել է ժամանակին և գտնվում է անթերի վիճակում։ Ես խորհուրդ կտամ ձեր ընկերությունը իմ գործընկերներին:",
+      rate: 10,
+    },
+    {
+      id: 4,
+      name: "Նատալյա Սմիրնովա",
+      image:
+        "https://csis-website-prod.s3.amazonaws.com/s3fs-public/styles/224_x_224/s3/2022-09/5Welsh.jpg?VersionId=k0RVk6BbBsFwgLfGVKOEP0T3ESy2fmU.&itok=R3BBILIT",
+      reviev:
+        "Ես շատ գոհ եմ ձեր ընկերության հետ գործարքից: Եվրոպայից բարձրորակ բեռնատար եմ ստացել շատ լավ գնով։ Սպասարկումը բարձրակարգ է, անձնակազմը ուշադիր է մանրուքների նկատմամբ։ Շնորհակալություն մեծ փորձի համար:",
+      rate: 8,
+    },
+    {
+      id: 5,
+      name: "Անդրեյ Նիկոլաև",
+      image:
+        "https://media.licdn.com/dms/image/C4E03AQFdZwSFsxAtDw/profile-displayphoto-shrink_800_800-alternative/0/1529613222331?e=2147483647&v=beta&t=QcQergZMQzUgEegDej-3bblPiIEm5oC7sgGNZMIj3MM",
+      reviev:
+        "Մենք Եվրոպայից բեռնատար ենք գնել ձեր ընկերության միջոցով: Գործընթացը արագ էր և անթերի։ Բեռնատարը ժամանեց ժամանակին, ինչպես խոստացել էիք, գերազանց վիճակում։ Շատ գոհ եմ գործարքից:",
+      rate: 9,
+    },
+    {
+      id: 6,
+      name: "Մարինա Իվանովա",
+      image:
+        "https://www.worldwomanfoundation.com/wp-content/uploads/2022/06/Untitled-design-9-500x500.png",
+      reviev:
+        "Ես շատ գոհ եմ ձեր ընկերության միջոցով Եվրոպայից բեռնատարի գնումից: Գործընթացը պարզ էր և արդյունավետ: Բեռնատարը եկավ գերազանց վիճակում, և ձեր թիմը շատ քաղաքավարի էր և արձագանքում բոլոր հարցերին: խորհուրդ եմ տալիս!",
+      rate: 9,
+    },
+    {
+      id: 7,
+      name: "Վլադիմիր Սոկոլով",
+      image:
+        "https://lh5.googleusercontent.com/proxy/Z1nExSEqCNATVpmSr8yr_-Xl2qiEN-3gYdaP-Wt_x02W-FCkqnO5Asc6WHTgX--kftoiG1pYRF3FuU6b_bwLI_MeciAYEYK-iWi6H_HHOYGCKYqQbICHiBYglfLu8a64yQ",
+      reviev:
+        "Ձեր ընկերության հետ համագործակցությունը հաճելի տպավորություն թողեց։ Բեռնատարը ստացել ենք Եվրոպայից ժամանակին և գերազանց վիճակում։ Գերազանց սպասարկում և պրոֆեսիոնալ անձնակազմ։ Մենք նորից կկապվենք ձեզ հետ:",
+      rate: 10,
+    },
 ];
+  
 
-const menu = document.querySelector(".menu");
-const menuBody = document.querySelector(".menuBody");
-const close = document.querySelector(".close");
-const trucks = document.querySelector(".trucks");
+const review = document.querySelector('.review');
+const next = document.querySelector('.next');
+const prev = document.querySelector('.prev');
+let counter = 1;
 
-menu.addEventListener('click', function () {
-    menuBody.classList.add('show')
-    // menuBody.classList.add('menuBody')
+function printReview(array = clientsReviews) {
+    let clientData = [];
+    let client = array.find((review) => review.id === counter);
+    clientData.push(client);    
+    clientData.forEach(reviews => {
+        review.insertAdjacentHTML('beforeend', `
+        <img src="${reviews.image}" alt=""> 
+        <h2>${reviews.name}</h2>
+        <span class="reviewText">"${reviews.reviev}"</span> <br>
+        <p class="rate">Գնահատում: ${reviews.rate}/10</p>
+        `);
+    });
+}
+
+printReview();
+
+next.addEventListener('click', function () {
+    if (counter === clientsReviews.length) {
+        counter = 0;
+    }
+    counter += 1;
+    review.innerHTML = '';
+    let clientData = []
+    let client = clientsReviews.find((review) => review.id === counter);
+    clientData.push(client)
+    printReview(clientData)
+
 })
 
-document.addEventListener('click', function(event) {
-    if (!menuBody.contains(event.target) && !menu.contains(event.target)) {
-        menuBody.classList.remove('show');
+prev.addEventListener('click', function () {
+    if (counter === 1) {
+        counter = clientsReviews.length + 1;
     }
-});
-
-
-function printTrucks(array = cars) {
-    trucks.innerHTML = '';
-    array.forEach((truck) => {
-        trucks.insertAdjacentHTML('afterbegin', 
-            `
-            <div class="truck">
-            <div class="truckImage">
-              <img src=${truck.image} alt="">
-            </div>
-            <div class="truckInfo">
-              <h3>${truck.name}</h3>
-              <div class="truckCharacteristic">
-                <span>Եվրո: ${truck.euro}</span>
-                <span>Տիպ: ${truck.type}</span>
-                <span>Վառելիք: ${truck.fuel}</span>
-              </div>
-              <div class="truckPower">
-                <span>Ուժ: ${truck.power}</span>
-                <span>Փոխանցման տուփ: ${truck.Transmission}</span>
-              </div>
-              <div class="Truckprice">
-                <p>${truck.price} €</p>
-              </div>
-            </div>
-          </div>
-            `
-        )
-    })
-}
-printTrucks();
-
-function printAsideMenu() {
-    const filteredBrands = cars.reduce((acc, truck) => {
-        if (!acc.includes(truck.brand)) {
-            acc.push(truck.brand)
-        }
-        return acc;
-    }, ['Ընտրել բոլորը']);
-    menuBody.insertAdjacentHTML('beforeend', `<h2>Ապրանքանիշեր</h2>`)
-    filteredBrands.forEach((truck) => {
-        menuBody.insertAdjacentHTML('beforeend', `
-        <div class="brand">
-            <p onclick='filterTrucks("${truck}")'>${truck}</p>
-        </div>
-        `)
-    })
-    menuBody.insertAdjacentHTML('beforeend', `
-    <div class="price">
-        <h2>Ընտրել ըստ գնի</h2>
-        <input type="number" placeholder="Նվազագույն գին" value="" class="minNumber"> <br>
-        <input type="number" placeholder="Առավելագույն գին" value="" class="maxNumber"/> <br>
-        <button onclick="filterTrucks(null, document.querySelector('.minNumber').value, document.querySelector('.maxNumber').value)">Հաստատել</button>
-    </div>
-`);
-}
-printAsideMenu();
-
-function filterTrucks(brandName, minvalue, maxvalue) {
-    let min = parseInt(minvalue);
-    let max = parseInt(maxvalue);
-
-    if (brandName === null) {
-        let filteredTrucks = cars.filter((truck) => truck.price >= min && truck.price <= max);
-        printTrucks(filteredTrucks);
-    } else if (brandName === 'Ընտրել բոլորը') {
-        printTrucks();
-    } else {
-        let filteredTrucks = cars.filter((truck) => truck.brand === brandName);
-        printTrucks(filteredTrucks);
-    }
-}
-
-
+    counter -= 1;
+    review.innerHTML = '';
+    let clientData = []
+    let client = clientsReviews.find((review) => review.id === counter);
+    clientData.push(client)
+    printReview(clientData)
+})
